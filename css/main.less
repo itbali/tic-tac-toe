@@ -1,0 +1,83 @@
+@import "mins.less";
+@import "vars.less";
+
+body {
+  background-color: @body;
+  color: #fff;
+  text-shadow: #ffffff 0px 0px 20px;
+  text-align: center;
+  font-family: "Azeret Mono", monospace;
+}
+
+h1 {
+  font-family: "Azeret Mono";
+}
+.txt {
+  font-size: 2em;
+}
+.board {
+  background-image: linear-gradient(122deg, #6746a7, #e61d0969);
+  border: 2px solid rgb(19, 9, 9);
+  border-radius: 10px;
+
+  margin: 0 7vh;
+  padding: 0 7vh;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr 1fr 1fr;
+  gap: 1em;
+
+  grid-template-areas:
+    ". . ."
+    ". . ."
+    ". . .";
+
+  .cell {
+    color: black;
+    width: 85%;
+    height: 20vh;
+    text-align: center;
+    font-size: 4em;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    margin: 15px auto;
+    display: flex;
+    background: linear-gradient(45deg, white, transparent);
+    transition: 100ms;
+
+    span {
+      margin: auto;
+      line-height: 1;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.player1 {
+  transition: 100ms;
+  color: @player1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: red 0px 0px 14px;
+  background-image: linear-gradient(45deg, rgb(245, 189, 179), transparent);
+  text-shadow: red 4px 4px 6px;
+}
+
+.player2 {
+  transition: 100ms;
+  color: @player2;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: #00ff00 0px 0px 14px;
+  background-image: linear-gradient(45deg, rgb(179, 245, 185), transparent);
+  text-shadow: #00ff00 4px 4px 6px;
+}
+
+.blocked {
+  border: 3px solid rgb(92, 57, 57);
+  border-radius: 10px;
+}

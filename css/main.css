@@ -1,0 +1,162 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  background-color: #031a2c;
+  color: #fff;
+  text-shadow: #ffffff 0px 0px 20px;
+  text-align: center;
+  font-family: "Azeret Mono", monospace;
+}
+h1 {
+  font-family: "Azeret Mono";
+}
+.txt {
+  font-size: 2em;
+}
+.board {
+  background-image: linear-gradient(122deg, #6746a7, #e61d0969);
+  border: 2px solid #130909;
+  border-radius: 10px;
+  margin: 0 7vh;
+  padding: 0 7vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr 1fr 1fr;
+  gap: 1em;
+  grid-template-areas: ". . ." ". . ." ". . .";
+}
+.board .cell {
+  color: black;
+  width: 85%;
+  height: 20vh;
+  text-align: center;
+  font-size: 4em;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  margin: 15px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: linear-gradient(45deg, white, transparent);
+  -webkit-transition: 100ms;
+  transition: 100ms;
+}
+.board .cell span {
+  margin: auto;
+  line-height: 1;
+  width: 100%;
+  height: 100%;
+}
+.player1 {
+  -webkit-transition: 100ms;
+  transition: 100ms;
+  color: #532020;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: red 0px 0px 14px;
+          box-shadow: red 0px 0px 14px;
+  background-image: linear-gradient(45deg, #f5bdb3, transparent);
+  text-shadow: red 4px 4px 6px;
+}
+.player2 {
+  -webkit-transition: 100ms;
+  transition: 100ms;
+  color: #225320;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: #00ff00 0px 0px 14px;
+          box-shadow: #00ff00 0px 0px 14px;
+  background-image: linear-gradient(45deg, #b3f5b9, transparent);
+  text-shadow: #00ff00 4px 4px 6px;
+}
+.blocked {
+  border: 3px solid #5c3939;
+  border-radius: 10px;
+}
