@@ -21,17 +21,44 @@
         Player <b class="playerNumber">1</b> choose the cell
       </div>
       <div class="board" id="boardID">
-        <div class="cell"><span class="gamecell" id="id1"> </span></div>
-        <div class="cell"><span class="gamecell" id="id2"> </span></div>
-        <div class="cell"><span class="gamecell" id="id3"> </span></div>
-        <div class="cell"><span class="gamecell" id="id4"> </span></div>
-        <div class="cell"><span class="gamecell" id="id5"> </span></div>
-        <div class="cell"><span class="gamecell" id="id6"> </span></div>
-        <div class="cell"><span class="gamecell" id="id7"> </span></div>
-        <div class="cell"><span class="gamecell" id="id8"> </span></div>
-        <div class="cell"><span class="gamecell" id="id9"> </span></div>
+        <div class="cell" data-tilt>
+          <span class="gamecell" id="id1"> </span>
+        </div>
+        <div class="cell">
+          <span class="gamecell" id="id2"> </span>
+        </div>
+        <div class="cell">
+          <span class="gamecell" id="id3"> </span>
+        </div>
+        <div class="cell">
+          <span class="gamecell" id="id4"> </span>
+        </div>
+        <div class="cell">
+          <span class="gamecell" id="id5"> </span>
+        </div>
+        <div class="cell">
+          <span class="gamecell" id="id6"> </span>
+        </div>
+        <div class="cell">
+          <span class="gamecell" id="id7"> </span>
+        </div>
+        <div class="cell">
+          <span class="gamecell" id="id8"> </span>
+        </div>
+        <div class="cell">
+          <span class="gamecell" id="id9"> </span>
+        </div>
       </div>
     </div>
   </body>
   <script src="./js/javascript.js"></script>
+  <script src="./js/vanilla-tilt.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelectorAll(".cell"), {
+      max: 10,
+      speed: 400,
+      perspective: 1000,
+      scale: 1.05,
+    });
+  </script>
 </html>
