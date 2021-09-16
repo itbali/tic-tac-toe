@@ -2,7 +2,7 @@ var el1 = document.querySelectorAll(".gamecell");
 var queue = 1;
 var nowinner = 0;
 var playerNumber = document.querySelector(".playerNumber");
-playerNumber.style.color = "#8679d9";
+playerNumber.style.color = "#f15252";
 
 for (let i = 0; i < el1.length; i++) {
   el1[i].addEventListener("click", function () {
@@ -31,7 +31,7 @@ for (let i = 0; i < el1.length; i++) {
         setTimeout(p2winner, 101); //check if p2 is winner after new noun
         queue = 1;
         playerNumber.innerText = "1";
-        playerNumber.style.color = "#8679d9";
+        playerNumber.style.color = "#f15252";
         // document.querySelector(".playerNumber").classList.add("player1");
         // document.querySelector(".playerNumber").classList.remove("player2");
       }

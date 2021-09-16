@@ -135,7 +135,7 @@ h1 {
 .player1 {
   -webkit-transition: 10ms;
   transition: 10ms;
-  color: #202353;
+  color: #f15252;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -146,10 +146,10 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-shadow: #2a00ff 0px 0px 14px;
-          box-shadow: #2a00ff 0px 0px 14px;
-  background-image: linear-gradient(45deg, #b3b4f5, transparent);
-  text-shadow: #2a00ffb0 0px 0px 16px;
+  -webkit-box-shadow: #ff00008a 0px 0px 14px;
+          box-shadow: #ff00008a 0px 0px 14px;
+  background-image: linear-gradient(45deg, #f5b3b3, transparent);
+  text-shadow: #ff8800b0 0px 0px 16px;
 }
 .player2 {
   -webkit-transition: 10ms;
