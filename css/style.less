@@ -1,0 +1,107 @@
+@import "./vars.less";
+
+body {
+    background-color: @body;
+    color: #fff;
+    text-shadow: #ffffff 0px 0px 20px;
+    text-align: center;
+    font-family: "Azeret Mono", monospace;
+}
+
+h1 {
+    font-family: "Azeret Mono";
+}
+.txt {
+    font-size: 2em;
+}
+.board {
+    background-image: url(https://picsum.photos/1350/700);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #00000073;
+    background-blend-mode: color;
+    -background-image: linear-gradient(122deg, #6746a7, #e61d0969);
+    border: 2px solid rgb(19, 9, 9);
+    border-radius: 10px;
+
+    margin: 0 7vh;
+    padding: 0 7vh;
+
+    display: -ms-grid;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-columns: 1fr 1fr 1fr;
+    gap: 1em;
+
+    grid-template-areas:
+        ". . ."
+        ". . ."
+        ". . .";
+
+    @media (max-width: 750px) {
+        margin: 0 3vw;
+        padding: 0 3vw;
+    }
+
+    .cell {
+        color: black;
+        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px);
+        box-shadow: 20px 20px 50px rgb(0 0 0 / 50%);
+        width: 85%;
+        height: 20vh;
+        text-align: center;
+        font-size: 20vh;
+        border-top: 1px solid white;
+        border-left: 1px solid white;
+        border-radius: 10px;
+        margin: 15px auto;
+        display: flex;
+        background: linear-gradient(45deg, white, transparent);
+        transition: 100ms;
+
+        @media (max-width: 750px) {
+            width: 100%;
+            font-size: 15vw;
+        }
+
+        span {
+            margin: auto;
+            line-height: 1;
+            width: 100%;
+            height: 100%;
+        }
+
+        &:hover {
+            transform: scale(105%);
+        }
+    }
+}
+
+.player1 {
+    transition: 10ms;
+    color: @player1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: #ff00008a 0px 0px 14px;
+    background-image: linear-gradient(45deg, rgb(245, 179, 179), transparent);
+    text-shadow: #ff8800b0 0px 0px 16px;
+}
+
+.player2 {
+    transition: 10ms;
+    color: @player2;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: #00ff00 0px 0px 14px;
+    background-image: linear-gradient(45deg, rgb(179, 245, 185), transparent);
+    text-shadow: #00ff00 0px 0px 16px;
+}
+
+.blocked {
+    border-top: 1px solid rgb(92, 57, 57);
+    border-left: 1px solid rgb(92, 57, 57);
+    border-radius: 10px;
+}
